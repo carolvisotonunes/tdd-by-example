@@ -29,6 +29,10 @@ public class MoneyTest {
         assertNotEquals(new Dollar(5), new Dollar(3));
     }
 
+    @Test
+    public void shouldReturnTrueWhenTwoDifferentObjectsAreNotEqual(){
+        assertNotEquals(new Dollar(5), new Franc(5));
+    }
 
 
     @Test
