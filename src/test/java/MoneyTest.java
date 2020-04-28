@@ -53,4 +53,15 @@ public class MoneyTest {
     public void shouldReturnFalseGivenDifferentObjectsFranc(){
         assertNotEquals(Money.franc(5), Money.franc(3));
     }
+
+    @Test
+     public void shouldReturnDollar(){
+        assertEquals("USD", Money.dollar(1).currency());
+    }
+
+    @Test
+    public void shouldReturnFranc(){
+        assertEquals("CHF", Money.franc(1).currency());
+    }
+
 }
