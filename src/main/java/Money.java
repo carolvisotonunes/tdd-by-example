@@ -30,13 +30,16 @@ public  class Money implements Expression {
                 ", currency='" + currency + '\'' +
                 '}';
     }
-
+    public Money reduce(String to){
+       return this;
+    }
     public Money times(int multiplier) {
         return new Money(amount *= multiplier, this.currency);
     }
     public Expression plus(Money addend){
-        return new Money( amount +addend.amount, currency);
+        return new Sum(this,addend);
     }
+
 
 
 }
