@@ -1,5 +1,8 @@
 public class Bank {
     Money reduce(Expression source, String toCurrency){
-        return Money.dollar(10);
+//        if(source instanceof Money) return (Money) source;
+//        Sum sum = (Sum) source;
+//        return sum.reduce(toCurrency);
+        return source.reduce(toCurrency);
     }
 }
