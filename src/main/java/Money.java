@@ -31,6 +31,11 @@ public  class Money implements Expression {
                 '}';
     }
 
+
+    public Expression times(int multiplier) {
+        return new Money(amount *= multiplier, this.currency);
+    }
+
     @Override
     public Money reduce(Bank bank, String to) {
         return new Money(amount/bank.rate(this.currency,to), to);
