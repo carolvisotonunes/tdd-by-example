@@ -8,7 +8,10 @@ public class Bank {
     }
 
     public Integer rate(String from, String to) {
-        return from.equals(to) ? 1 : rateMap.get(new Pair(from, to));
+        if (from.equals(to)){
+            return 1;
+        }
+        return rateMap.get(new Pair(from, to));
     }
 
     public void addRate(String from, String to, int rate) {
