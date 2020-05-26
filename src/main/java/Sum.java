@@ -1,9 +1,9 @@
 public class Sum implements Expression {
-    public Expression augmend;
-    public Expression addmend;
+    public final Expression augmend;
+    public final Expression addmend;
 
-    public Sum(Expression augend, Expression addend) {
-        this.augmend = augend;
+    public Sum(Expression augmend, Expression addend) {
+        this.augmend = augmend;
         this.addmend = addend;
     }
 
